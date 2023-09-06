@@ -8,9 +8,13 @@
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
-    .search {
+    body {
+      background-image: url(C:/Users/Asus/OneDrive/Pictures/searchimage.jpg);
+      background-color: rgb(208, 228, 236);
+    }
+    .search{
         margin: 0 auto;
-        text-align: center;
+        text-align:center;
     }
 
     .search h4 {
@@ -29,8 +33,8 @@
     }
 
     .search a{
-        background-color: #fcfafa ;
-        margin-top: 20px;
+        background-color: #fafcfc ;
+        margin-top: 30px;
         width: 100px;
         text-align: center;
         margin-left: 5px;
@@ -71,8 +75,8 @@
               <a class="nav-link disabled" href="#">Disabled</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <form class="form-inline my-2 my-lg-0 " action="https://www.google.com/search" method = "get" class = "search-bar">
+            <input class="form-control mr-sm-2" type="text" placeholder="search.." aria-label="Search" name = "q">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
@@ -80,10 +84,11 @@
       <!--Search Bar-->
       <div class="search">
       <h4>Search Engine</h4>
-      <input id="search" type="text" placeholder="Search..."><br>
+       <form action="https://www.google.com/search" method = "get" class = "search-bar"> 
+      <input id="search" type="text" placeholder="Search..." aria label = "Search" name = "q"><br>
       <a href="#" class="btn" onclick="dict()">Dictionary</a>
       <a href="#" class="btn" onclick="scholar()">Scholar</a>
-        
+    </form>
       </div>
 
     <!--Javascript-->
@@ -98,7 +103,7 @@
 
         function scholar(){
             var x = document.getElementById("search").value;
-            const url = "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=love&btnG="; 
+            const url = "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q="; 
             var url1 = url + x;
             var win = window.open(url1, '_blank');
             win.focus;
@@ -106,4 +111,6 @@
     </script>
       
 </body>
+
 </html>
+
